@@ -128,3 +128,8 @@ STATIC_URL = 'static/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+RAZORPAY_KEY = "your_key_here"
+RAZORPAY_SECRET = "your_secret_here"
+
+

@@ -73,6 +73,8 @@
                     <br>
 
                    <a href="{% url 'book_room' room.id %}" class="btn btn-primary w-100"> Book Now</a>
+                   <a href="/cancel/{{ room.id }}" class="btn btn-danger">Cancel</a>
+
                 </div>
             </div>
             {% endfor %}
