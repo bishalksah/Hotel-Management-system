@@ -34,18 +34,8 @@
 </head>
 
 <body>
-
-
-    {% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-    {% endfor %}
-    {% endif %}
-
-
+    
+    
     <!-- Header -->
     <div class="header">
         <h1>🏨 Hotel Management System</h1>
@@ -73,8 +63,6 @@
                     <br>
 
                    <a href="{% url 'book_room' room.id %}" class="btn btn-primary w-100"> Book Now</a>
-                   <a href="/cancel/{{ room.id }}" class="btn btn-danger">Cancel</a>
-
                 </div>
             </div>
             {% endfor %}

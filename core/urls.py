@@ -27,8 +27,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('cancel/<int:room_id>/', views.cancel_booking),
-    path('payment/<int:room_id>/', views.payment, name='payment'),
-    path('payment-success/', views.payment_success, name='payment_success'),
+   
 
 
 ]
