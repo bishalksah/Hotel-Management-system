@@ -13,7 +13,7 @@ def book_room(request, room_id):
 
     if not room.is_available:
         messages.error(request, "Room is already booked!")
-        return redirect('/')
+        return redirect('home')
 
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -33,7 +33,7 @@ def book_room(request, room_id):
         room.save()
 
         messages.success(request, "Room booked successfully!")
-        return redirect('/')
+        return redirect('home')
 
     return render(request, 'booking.html', {'room': room})
 
@@ -48,4 +48,7 @@ def cancel_booking(request, room_id):
         room.save()
 
     messages.success(request, "Booking cancelled successfully!")
-    return redirect('/')
+    return redirect('home')
+
+def booking(request):
+    return render(request, 'bookings.html')
